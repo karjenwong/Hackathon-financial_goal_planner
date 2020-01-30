@@ -1,17 +1,5 @@
 import React from "react";
-import "./Custom.css";
-import Summary from "./Components/Summary";
-import Popup from "./Components/Popup";
-import ScrollTop from "./Components/ScrollTop";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LinkContainer from "react-router-bootstrap/lib/LinkContainer";
-
-import Navbar from "react-bootstrap/Navbar";
-
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons/";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 let user = {
   Name: "Jack Smith",
   customer: 12345,
@@ -26,39 +14,7 @@ let user = {
   mortgageRate: 0.45,
   mortgageLength: 10
 };
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <ScrollTop />
-        <div>
-          <Navbar expand="lg" className="navBarCustom">
-            <LinkContainer to="/">
-              <Navbar.Brand className="arrow">
-                <FontAwesomeIcon icon={faAngleLeft} />
-              </Navbar.Brand>
-            </LinkContainer>
-            <Navbar.Brand>
-              House Plan {user.expectedCompletion.getFullYear()}
-            </Navbar.Brand>
-            <div></div>
-          </Navbar>
-
-          <Switch>
-            <Route exact path="/">
-              <Summary />
-            </Route>
-            <Route path="/modify">
-              <Modify />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </div>
-  );
-}
-
-function Modify() {
+function Summary() {
   const format = x =>
     "$" + x.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
   const dateFormat = x =>
@@ -67,9 +23,10 @@ function Modify() {
       month: "long",
       day: "numeric"
     });
+
   const percent = x => (x * 100).toFixed(1) + "%";
   return (
-    <div id="modify">
+    <div id="portfolioHouseSummary">
       <section id="progress">
         <div className="customHeading">Progress</div>
         <p className="flex">
@@ -77,7 +34,7 @@ function Modify() {
         </p>
         <div className="customCard">
           <div>Currently Saved</div>
-          <input type="text" placeholder={format(user.currentlySaved)} />
+          <div>{format(user.currentlySaved)}</div>
         </div>
         <div className="customCard">
           <div>Leftover Amount</div>
@@ -85,7 +42,7 @@ function Modify() {
         </div>
         <div className="customCard">
           <div>Monthly Savings</div>
-          <input type="text" placeholder={format(user.monthlySaving)} />
+          <div>{format(user.monthlySaving)}</div>
         </div>
         <div className="customCard">
           <div>Date Created</div>
@@ -135,16 +92,14 @@ function Modify() {
         </div>
       </section>
       <div className="flex">
-        <LinkContainer to="/">
-          <button type="button" className="cancelButton">
-            Cancel
+        <LinkContainer to="/modify">
+          <button type="button" className="modifyButton">
+            Modify Plan
           </button>
         </LinkContainer>
-        <div className="spacer"></div>
-        <Popup />
       </div>
     </div>
   );
 }
 
-export default App;
+export default Summary;

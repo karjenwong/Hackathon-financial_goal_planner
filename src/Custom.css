@@ -1,3 +1,125 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 .margin {
-  margin:1rem;
+  margin: 1.25rem;
+}
+
+.navBarCustom {
+  background-color: #B92F1C;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+.customCard {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 14px;
+}
+
+.sticky {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.width {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem;
+}
+
+.customHeading {
+  background-color: #ecf0f1;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.advisorCard {
+  display:flex;
+  justify-content: space-between;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 14px;
+}
+.spacer {
+  margin-left:1rem;
+}
+.iconContainers{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  background-repeat: no-repeat;
+}
+.advisorTitle {
+  color: grey;
+  font-style: italic;
+}
+
+.modifyButton {
+  border-radius: 0.25rem;
+  background-color:#B92F1C;
+  border:none;
+  color:white;
+  font-size:1rem;
+  padding: 1rem 2rem;
+}
+
+.saveButton {
+  border-radius: 0.25rem;
+  background-color:#B92F1C;
+  border:none;
+  color:white;
+  font-size:1rem;
+  padding: 1rem 2rem;
+  width:140px;
+}
+
+.cancelButton {
+  border-radius: 0.25rem;
+  background-color:white;
+  border:1px solid grey;
+  color:#B92F1C;
+  font-size:1rem;
+  padding: 1rem 2rem;
+  width:140px;
+}
+
+input {
+  text-align:right;
+}
+
+
+.modal-title{
+  color:#39abb4;
+}
+.customModal {
+  text-align:center;
+  justify-content: center;
+}
+
+.modal-footer{
+  justify-content: center;
 }
