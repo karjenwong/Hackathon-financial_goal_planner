@@ -48,9 +48,9 @@ function Summary({ user }) {
     }
   ].map((info, i) => <CustomCard info={info} key={i} />);
   return (
-    <div id="modify">
+    <div id="summary">
       <section id="progress">
-        <div className="customHeading">Modifying...</div>
+        <div className="customHeading">Summary</div>
         <ProgressRing
           progressPercent={user.progressPercent}
           mortgageLength={user.mortgageLength}
