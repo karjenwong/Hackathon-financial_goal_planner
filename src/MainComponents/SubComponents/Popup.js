@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
+import LinkContainer from "react-router-bootstrap/lib/LinkContainer"
+
 function Popup() {
   const [show, setShow] = useState(false);
 
@@ -15,9 +17,9 @@ function Popup() {
         Save
       </Button>
 
-      <Modal centered show={show} onHide={handleClose} >
+      <Modal centered show={show} onHide={handleClose}>
         <div className="customModal">
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>New plan has been saved!</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -25,9 +27,11 @@ function Popup() {
             will get back to you if needed!
           </Modal.Body>
           <Modal.Footer>
-            <Button className="saveButton" onClick={handleClose}>
-              Okay
-            </Button>
+            <LinkContainer to="/">
+              <Button className="saveButton" onClick={handleClose}>
+                Okay
+              </Button>
+            </LinkContainer>
           </Modal.Footer>
         </div>
       </Modal>

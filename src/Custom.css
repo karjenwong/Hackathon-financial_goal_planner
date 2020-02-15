@@ -10,7 +10,7 @@ html {
 }
 
 .navBarCustom {
-  background-color: #B92F1C;
+  background-color: #b92f1c;
 }
 
 .navbar-brand {
@@ -49,9 +49,8 @@ html {
   align-items: center;
 }
 
-
 .advisorCard {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   border-radius: 0;
   display: flex;
@@ -60,9 +59,9 @@ html {
   font-size: 14px;
 }
 .spacer {
-  margin-left:1rem;
+  margin-left: 1rem;
 }
-.iconContainers{
+.iconContainers {
   display: flex;
   justify-content: space-between;
 }
@@ -80,46 +79,79 @@ html {
 
 .modifyButton {
   border-radius: 0.25rem;
-  background-color:#B92F1C;
-  border:none;
-  color:white;
-  font-size:1rem;
+  background-color: #b92f1c;
+  border: none;
+  color: white;
+  font-size: 1rem;
   padding: 1rem 2rem;
 }
 
 .saveButton {
   border-radius: 0.25rem;
-  background-color:#B92F1C;
-  border:none;
-  color:white;
-  font-size:1rem;
+  background-color: #b92f1c;
+  border: none;
+  color: white;
+  font-size: 1rem;
   padding: 1rem 2rem;
-  width:140px;
+  width: 140px;
 }
 
 .cancelButton {
   border-radius: 0.25rem;
-  background-color:white;
-  border:1px solid grey;
-  color:#B92F1C;
-  font-size:1rem;
+  background-color: white;
+  border: 1px solid grey;
+  color: #b92f1c;
+  font-size: 1rem;
   padding: 1rem 2rem;
-  width:140px;
+  width: 140px;
 }
 
 input {
-  text-align:right;
+  text-align: right;
 }
 
-
-.modal-title{
-  color:#39abb4;
+.modal-title {
+  color: #39abb4;
+  white-space: nowrap;
+}
+.modal-header {
+  justify-content: center;
 }
 .customModal {
-  text-align:center;
+  text-align: center;
   justify-content: center;
 }
 
-.modal-footer{
+.modal-footer {
   justify-content: center;
+}
+
+.progressRing {
+  display: flex;
+  justify-content: center;
+}
+.progressCircle {
+  transform: rotate(-120deg);
+}
+
+.circleText {
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+}
+.circleTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circlePercent {
+  font-weight: bold;
+  font-size: 40px;
+  font-style: italic;
+}
+
+.circleLength span {
+  font-weight:bold;
+
 }
